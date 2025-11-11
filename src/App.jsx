@@ -11,21 +11,30 @@ const list = [
    { title: 'Interstellar', genre: 'Fantascienza' },
    { title: 'Pulp Fiction', genre: 'Thriller' },
  ]
- 
+
+
+ const [search, setSearch] = useState('')
+ const [select, setSelect] = useState('')
+
+ useEffect(() => {
+
+  
+ }, [search, select])
 
   return (
     <>
       <h1>Scegli il genere di film che vuoi cercare tra quelli disponibili 🎥</h1>
 
       <div className='container'>
-          <select class="form-select" aria-label="Default select example">
-          <option selected>Seleziona il genere</option>
+          <select className="form-select" aria-label="Default select example">
+          <option >Seleziona il genere</option>
       {
         list.map(lista =>
-          <option value="">{lista.genre}</option>
+          <option key={lista.title} value="">{lista.genre}</option>
         )
       }
       </select>
+    { /* <input placeholder='Oppure cerca un film'   type='text' className='' value={search} onChange={(e) => setSearch(e.target.value)} /> */}
       {
         list.map(lista =>
           <div className='text-start py-1' key={lista.title} >
