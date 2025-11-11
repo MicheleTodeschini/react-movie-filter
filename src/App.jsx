@@ -34,7 +34,7 @@ console.log(genres);
 let scelta = select
 
   
-    if (scelta == "") {
+    if (scelta == "Seleziona il genere") {
     setFilms(list)
   } else {
     setFilms(list.filter((lista) => lista.genre === select))
