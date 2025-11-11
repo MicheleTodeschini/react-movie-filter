@@ -16,8 +16,12 @@ const genres = []
 
 for (let i = 0; i < list.length; i++) {
   const toKeep = list[i].genre;
-  
+  if (!genres.includes(toKeep)) {
+    genres.push(toKeep)
+  }
 }
+
+console.log(genres);
 
 
  //const [search, setSearch] = useState('')
