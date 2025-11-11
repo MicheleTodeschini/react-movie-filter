@@ -48,8 +48,8 @@ let scelta = select
           <select className="form-select" aria-label="Default select example" value={select} onChange={(e) => setSelect(e.target.value)}>
           <option >Seleziona il genere</option>
       {
-        list.map(lista =>
-          <option key={lista.title} >{lista.genre}</option>
+        genres.map(generi =>
+          <option key={generi.length + 1} >{generi}</option>
         )
       }
       </select>
