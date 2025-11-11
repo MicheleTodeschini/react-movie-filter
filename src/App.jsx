@@ -24,17 +24,17 @@ for (let i = 0; i < list.length; i++) {
 console.log(genres);
 
 
- //const [search, setSearch] = useState('')
+ const [search, setSearch] = useState('')
  const [select, setSelect] = useState('')
  const [films, setFilms] = useState(list)
 
 
   useEffect(() => {
-// SE il genere in select è uguale al genere del film, mi restituisce il film
+
 let scelta = select
 
   
-    if (scelta == "Seleziona il genere") {
+    if (scelta === "" || scelta === "Seleziona il genere") {
     setFilms(list)
   } else {
     setFilms(list.filter((lista) => lista.genre === select))
@@ -55,7 +55,7 @@ let scelta = select
         )
       }
       </select>
-    { /* <input placeholder='Oppure cerca un film'   type='text' className='' value={search} onChange={(e) => setSearch(e.target.value)} /> */}
+    <input placeholder='Oppure cerca un film'   type='text' className='' value={search} onChange={(e) => setSearch(e.target.value)} /> 
       {
         films.map(lista =>
           <div className='text-start py-1' value={films} key={lista.title} >
