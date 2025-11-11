@@ -18,9 +18,10 @@ const list = [
 
  useEffect(() => {
 // SE il genere in select è uguale al genere del film, mi restituisce il film
+let scelta = select
 
-  if (select == list.genre) {
-    setSelect(select)
+  if (scelta === list.genre) {
+    setSelect(scelta)
   } 
   
  }, [select])
