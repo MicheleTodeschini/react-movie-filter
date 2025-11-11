@@ -15,12 +15,20 @@ const list = [
 
   return (
     <>
-      <h1>Scegli il film che vuoi cercare 🎥</h1>
+      <h1>Scegli il genere di film che vuoi cercare tra quelli dispinibili 🎥</h1>
 
       <div className='container'>
+          <select class="form-select" aria-label="Default select example">
+          <option selected>Seleziona il genrere</option>
       {
         list.map(lista =>
-          <div className='card'>
+          <option value="">{lista.genre}</option>
+        )
+      }
+      </select>
+      {
+        list.map(lista =>
+          <div className='text-start py-1' key={lista.title} >
             <h3>{lista.title}🎬</h3>
           </div>
         )
