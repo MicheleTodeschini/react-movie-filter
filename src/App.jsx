@@ -17,7 +17,9 @@ const list = [
  const [select, setSelect] = useState('')
 
  useEffect(() => {
-  if (select === list.genre) {
+// SE il genere in select è uguale al genere del film, mi restituisce il film
+
+  if (select == list.genre) {
     setSelect(select)
   } 
   
@@ -32,7 +34,7 @@ const list = [
           <option >Seleziona il genere</option>
       {
         list.map(lista =>
-          <option key={lista.title} value={select}>{lista.genre}</option>
+          <option key={lista.title} value={select} onChange={(e) => setSelect(e.target.value)}>{lista.genre}</option>
         )
       }
       </select>
