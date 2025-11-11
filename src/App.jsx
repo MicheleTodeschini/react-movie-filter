@@ -13,13 +13,15 @@ const list = [
  ]
 
 
- const [search, setSearch] = useState('')
+ //const [search, setSearch] = useState('')
  const [select, setSelect] = useState('')
 
  useEffect(() => {
-
+  if (select === list.genre) {
+    setSelect(select)
+  } 
   
- }, [search, select])
+ }, [select])
 
   return (
     <>
@@ -30,7 +32,7 @@ const list = [
           <option >Seleziona il genere</option>
       {
         list.map(lista =>
-          <option key={lista.title} value="">{lista.genre}</option>
+          <option key={lista.title} value={select}>{lista.genre}</option>
         )
       }
       </select>
@@ -38,7 +40,7 @@ const list = [
       {
         list.map(lista =>
           <div className='text-start py-1' key={lista.title} >
-            <h3>{lista.title}🎬</h3>
+            <h3>{lista.title} - {lista.genre}</h3>
           </div>
         )
       }
