@@ -35,9 +35,9 @@ let scelta = select
 
   
     if (scelta == "") {
-    setFilms(films)
+    setFilms(list)
   } else {
-    setFilms(films.filter((lista) => lista.genre === select))
+    setFilms(list.filter((lista) => lista.genre === select))
   }
   
  }, [select])
