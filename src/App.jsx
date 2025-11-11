@@ -15,11 +15,11 @@ const list = [
 
   return (
     <>
-      <h1>Scegli il genere di film che vuoi cercare tra quelli dispinibili 🎥</h1>
+      <h1>Scegli il genere di film che vuoi cercare tra quelli disponibili 🎥</h1>
 
       <div className='container'>
           <select class="form-select" aria-label="Default select example">
-          <option selected>Seleziona il genrere</option>
+          <option selected>Seleziona il genere</option>
       {
         list.map(lista =>
           <option value="">{lista.genre}</option>
